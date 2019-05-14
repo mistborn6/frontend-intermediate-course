@@ -7,7 +7,7 @@ const I18N = {
 let cursor = '';
 let isLoading = true;
 let LANG = 'zh';
-const limit = 22;
+const limit = 21;
 
 function changeLang(lang) {
     document.querySelector('.title').innerHTML = I18N[lang].TITLE;
@@ -57,13 +57,6 @@ function addData(lang) {
 
         div.setAttribute('class', 'channel');
         
-        if ((limit % 3) == 1) {
-            $container.appendChild(div);
-            $container.appendChild(div);
-            console.log((limit % 3) == 1);
-        } else if ((limit % 3) == 2) {
-            $container.appendChild(div);
-        }
         
         isLoading = false;
         cursor = str.pagination.cursor;
